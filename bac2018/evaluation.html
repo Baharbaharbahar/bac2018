@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evaluation hotel</title>
+</head>
+
+<body onload="genererCaptcha()">
+    <form action="evaluation.php" name="f1" method="post">
+        <center>
+            <h1>evaluation hotel</h1>
+        </center>
+        <legend>
+            <fieldset>
+
+                <p>hotel : <select name="hotel" id="hotel">
+                        <option value="0" selected>choisir un hotel</option>
+                        <option value="">5 Stars</option>
+                        <option value="">Globe</option>
+                        <option value="">The sum</option>
+                    </select></p>
+                <fieldset id="satis">
+                    <label for="choice1" id="choice1">
+
+                        <p>Acceuil:
+                            <label for="s1">
+
+                                <span>tres satisfaisant</span>
+                                <input type="radio" id="c1" value="3" name="acc" class="radioCheck">
+                            </label>
+                            <label for="s2">
+
+                                <span> satisfaisant</span>
+                                <input type="radio" id="c2" value="2" name="acc" class="radioCheck">
+                            </label>
+
+                            <label for="s3">
+
+                                <span>peu satisfaisant</span>
+                                <input type="radio" id="c3" value="3" name="acc" class="radioCheck">
+                            </label>
+
+                        </p>
+                    </label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p>Restauration:
+                        <label for="s1">
+
+                            <span>tres satisfaisant</span>
+                            <input type="radio" name="s1" id="c4" value="3">
+                        </label>
+                        <label for="s2">
+
+                            <span> satisfaisant</span>
+                            <input type="radio" name="s2" id="c5" value="2">
+                        </label>
+
+                        <label for="s3">
+
+                            <span>peu satisfaisant</span>
+                            <input type="radio" name="s3" id="c6" value="3">
+                        </label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <span>Extra :</span>
+                    <span>
+                        <input type="checkbox" name="" id="c7">
+                        piscine couverte
+                    </span>
+                    <span>
+                        <input type="checkbox" name="" id="c8"> Plage privée
+                    </span>
+                    <span>
+                        <input type="checkbox" name="" id="c9">
+                        couverture wifi
+                    </span>
+
+                </fieldset>
+                <br>
+                <fieldset>
+                    <span>Capetcha</span>
+                    <input type="text" id="captcha" name="captcha">
+                    <input type="button" value="actualiser" onclick="genererCaptcha()">
+
+                    <br>
+                    <br>
+                    <span>Reponse </span>
+                    <input type="text" name="reponse" id="reponse">
+
+                </fieldset>
+                <br>
+                <input type="submit" value="verifier" onclick="verif()"><input type="reset" value="annuler">
+            </fieldset>
+        </legend>
+    </form>
+    <script defer src="controle.js"></script>
+</body>
+
+</html>
