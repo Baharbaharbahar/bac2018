@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="Controle.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="GenererCaptcha()">
+    <form action="Evaluation.php" method="post" onsubmit="Verif()">
+        <fieldset>
+            <center><h1>Evaluation d'un hotel </h1></center>
+            <p>Hotel <select name="hotel" id="hotel">
+                <option value="">Choisir un hotel </option>
+                <option value="10">5 Stars </option>
+                <option value="20">Globe</option>
+                <option value="30">The Sun </option>
+            </select> </p>
+            <fieldset>
+                <p> Accueil : 
+                    <input type="radio" name="accueil" id="a1" value="3"> <span>Tres satisfaisant</span>
+                    <input type="radio" name="accueil" id="a2" value="2"> <span> satisfaisant</span>
+                    <input type="radio" name="accueil" id="a3" value="1"> <span>peu satisfaisant</span>
+                </p>
+            </fieldset>
+            <fieldset>
+                <p> Restauration : 
+                    <input type="radio" name="restauration" id="r1" value="3"> <span>Tres satisfaisant</span>
+                    <input type="radio" name="restauration" id="r2" value="2"> <span> satisfaisant</span>
+                    <input type="radio" name="restauration" id="r3" value="1"> <span>peu satisfaisant</span>
+                </p>
+            </fieldset>
+            <fieldset>
+                <p> Extra  :
+                     <p> <input type="checkbox" name="extra" id="e1" value="4"> <span>piscine couverte</span></p>
+                    <p><input type="checkbox" name="extra" id="e2" value="2"> <span> Plage privée</span></p>
+                    <p><input type="checkbox" name="extra" id="e3" value="1"> <span>couverture wifi</span></p>
+                </p>
+            </fieldset>
+            <fieldset>
+                <p>Captcha <input type="text" name="captcha" id="captcha"> <input type="submit" value="Actualiser" onclick="GenererCaptcha()"></p>
+                <p>combien de lettres majusacules la zone Captcha ?</p>
+                <p>Reponse <input type="text" name="reponse" id="reponse"></p>
+            </fieldset>
+        </fieldset>
+        <input type="reset" value="Annuler">
+        <input type="submit" value="valider">
+    </form>
+</body>
+</html>
